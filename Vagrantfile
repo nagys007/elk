@@ -297,14 +297,14 @@ Vagrant.configure(2) do |config|
     #s.args = ["kibanaadmin", "kibana_passwd"]
   #end
   #
-  # config.vm.provision "shell", inline: $java8
-  # config.vm.provision "shell", inline: $elasticsearch
-  # config.vm.provision "shell", inline: $kibana
-  # config.vm.provision "shell", inline: $nginx, args: ["kibanaadmin", "kibana_passwd"]
-  # config.vm.provision "shell", inline: $logstash
-  # config.vm.provision "shell", inline: $ssl_cert, args: [ip]
-  # config.vm.provision "shell", inline: $logstash_config
-  # config.vm.provision "shell", inline: $dashboard
+   config.vm.provision "shell", inline: $java8
+   config.vm.provision "shell", inline: $elasticsearch
+   config.vm.provision "shell", inline: $kibana
+   config.vm.provision "shell", inline: $nginx, args: ["kibanaadmin", "kibana_passwd"]
+   config.vm.provision "shell", inline: $logstash
+   config.vm.provision "shell", inline: $ssl_cert, args: [ip]
+   config.vm.provision "shell", inline: $logstash_config
+   config.vm.provision "shell", inline: $dashboard
    config.vm.provision "shell", inline: $filebeat, args: [ip]
    config.vm.provision "shell", inline: $topbeat, args: [ip]
   #
